@@ -170,7 +170,6 @@ else:
 
 
 
-print ("\n")
 
 print("Bye felisha")
 
