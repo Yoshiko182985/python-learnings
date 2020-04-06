@@ -1,15 +1,6 @@
 print("Hello, world!")
 
-#This is a comment!
-
-print("The weather today is quite nice.")
-#print("Although I've heard it might rain soon...")
-
 print("\n")
-
-"""
-This a "multiline comment". It's less highly recommended because it's actually not a comment! Technically, it's a multiline string. Python ignores string literals (text constants) that aren't assigned to a variable. It's not displayed, but exists and could potentially cause unexpected errors, so it's still recommended to use regular hashtags in comments!
-"""
 
 #Variables are created upon declaration
 #Strings can be declared with the use of double or single quotes
@@ -19,7 +10,7 @@ print (a + b)
 
 print("\n")
 
-#Python allows you to assign values to multiple variales in one line!
+#Python allows you to assign values to multiple variables in one line!
 e, f, g = "Orange", "Banana", "Cherry"
 print (e)
 print (f)
@@ -38,19 +29,18 @@ print("\n")
 #If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value!
 k = "awesome"
 
-def funcone():
+def func1():
     k = "fantastic"
     print("Python is " + k)
 
-funcone()
+func1()
 
 #The area inside a function's parentheses (argument) can also be given a variable whose meaning will be defined when the function is called
-
-def functwo(k):
+def func2(k):
     print("Python is " + k)
 
-functwo("cool")
-functwo("terrible")
+func2("cool")
+func2("terrible")
 
 print("\n")
 
@@ -109,8 +99,8 @@ print ("\n")
 
 #The "format()" method taxes the passed arguments, formats them, and places them in the string where the placeholers {} are
 age = 19
-txt_2 = "My name is Jo, and I'm {} years old!"
-print(txt_2.format(age))
+txt2 = "My name is Jo, and I'm {} years old!"
+print(txt2.format(age))
 
 print ("\n")
 
@@ -124,18 +114,18 @@ print (myorder.format(quantity, itemno, price))
 print ("\n")
 
 #To insert characters that are illegal in a string, use an escape character (\) followed by the character you want to insert
-txt_3 = "We are the so-called \"Vikings\" from the north!"
-print (txt_3)
+txt3 = "We are the so-called \"Vikings\" from the north!"
+print (txt3)
 
 print ("\n")
 
 #Creates a new line (Carriage return)
 #In python 2, the standard way of printing was without parentheses
-txt_4 = ("What goes,\nlet go")
-print (txt_4)
+txt4 = ("What goes,\nlet go")
+print (txt4)
 
-txt_5 = ("Long time\tno see!")
-print (txt_5)
+txt5 = ("Long time\tno see!")
+print (txt5)
 
 print ("\n")
 
@@ -168,12 +158,147 @@ if functhree() :
 else:
     print("No")
 
+print ("\n")
 
+#Let's work on some logical operators: and, or, and not
 
+v = 5
 
-print("Bye felisha")
+print (v > 3 and v < 10)
+print (v > 3 or  v < 4)
+print (not(v > 3 and v < 10))
+
+#Let's look into some identity operators: is, is not.
+w = ["apple", "banana"]
+x = ["apple", "banana"]
+y = w
+
+print ("\n")
+
+#"==" compares for value, is compares for identity
+
+print (w is y)
+#Returns True because w is the same object as y
+
+print (w is x)
+#Returns False because w is not the same object as x, even if they have the same content
+
+print (w == x)
+#This demonstrates the difference between "is" and "==": this comparison returns True because w is equal to x
+
+print ("\n")
+
+#"in" returns True if a sequence with the specified value is present in the object
+print ("banana" in w)
+#Returns True because a sequence with the value "banana" is in the list
+
+print ("pineapple" not in w)
+#Returns True  because a sequence with the value "pineapple" is not in the list
+
+print ("\n")
+
+#A list is a collection which is ordered and changeable
+list1 = ["apple", "banana", "cherry"]
+print (list1)
+
+#You access the list items by referring to the index number. Letps print the second item of the list!
+print(list1[1])
+
+#Let's try using a negative index, aka beginning from the end! -1 is the last item, -2 is the second to last item, etc...
+print(list1[-1])
+
+print ("\n")
+
+#Let's practice specifying a range of indexes by specifying where to start and end the range. When specifying a range, the return value will be a new list with the specified items
+list2 = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(list2[2:5])
+
+#By leaving out the start value, the range will start at the first item
+print(list2[:4])
+
+#By leaving out the end value, the range will go on to the end of the list
+print(list2[2:])
+
+#Specify negative indexes if you want to start the search from the end of the list
+print(list2[-4:-1])
+
+print ("\n")
+
+#To change the value of a specific item, refer to the index number, for example, this changes the second item
+list1[1] = "blackcurrant"
+print(list1)
+
+#You can loop through the list items by using a for loop
+for z in list1:
+    print(z)
+
+#To determine if a specified item is present in a list, use the in keyword
+#Let's check if "apple" is present in the list
+if "apple" in list1:
+    print("Yes, 'apple' is in the fruits list")
+
+#To determine how many items a list has, use the len() function
+print(len(list2))
+
+#To add an item to the end of a list, use the append() method
+list1.append("orange")
+print(list1)
+
+#To add an item at the specified index, use the insert() method
+#Let's insert an item at the second position
+list1.insert(1, "grape")
+print(list1)
+
+#There are several methods to remove items from a list...
+#Remove() - removes the information! It no longer exists and can't be used
+list1.remove("apple")
+print(list1)
+
+#Pop() - removes the specified index or the last item if the index isn't specified, information isn't deleted, just removed and can be called on later
+list1.pop()
+print(list1)
+
+#Del - removes the specified index or delete the whole list
+del list1[0]
+print(list1)
+
+del list1
+
+#The clear() method empties the list
+list3 = ["apple", "banana", "cherry"]
+list3.clear()
+print(list3)
+
+#Let's learn how to copy lists!
+list4 = list2.copy()
+print(list4)
+
+#You can also copy lists using the list() method
+list5 = list(list2)
+print(list5)
+
+# There are several ways to join or concentrate two or mosre lists in python.
+#Let's use the + sign to join two lists!
+list6 = ["a", "b", "c"]
+list7 = [ 1, 2, 3]
+list8 = list6 + list7
+print(list8)
+
+#You can also append all the items from list7 into list6, one by one
+for aa in list7:
+    list6.append(aa)
+
+print(list6)
+
+#You can even use the extend() method, which adds elements from one list to another list
+
+list7 = ["a", "b", "c"]
+list8 = [1, 2, 3]
+
+list7.extend(list8)
+print(list7)
+
 
 
 
 print ("\n")
-
