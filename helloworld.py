@@ -409,7 +409,7 @@ else:
 
 print ("\n")
 
-#For loops time! These things are used for iterating over a sequence (list, tuple, dictionaru, set, or string). Using these, we can execufte a set of statements, once for each item in a list, tuple, set, etc...
+#For loops time! These things are used for iterating over a sequence (list, tuple, dictionary, set, or string). Using these, we can execufte a set of statements, once for each item in a list, tuple, set, etc...
 for gg in list2:
     print(gg)
 
