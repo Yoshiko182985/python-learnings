@@ -14,20 +14,7 @@ starnum = int(input("How many stars would you like to print? "))
 for m in range (0, starnum):
     print("*", end = "" )
 
-print("")
-
-#----------------------------------------------------------------------------------------------
-
-#Goes through my ages from 0-82, and for each age, prints my age and Tamer's age. It's basically a loop with a few if and elif statements tossed in!
-for currentage in range (0, 83):
-    if currentage < 19:
-        print("When I was " + str(currentage) + ", Tamer was " + str(currentage + 18))
-    elif currentage == 19:
-        print("Now that I'm " + str(currentage) + ", Tamer is " + str(currentage + 18))
-    elif currentage == 82:
-        print("When I'm " + str(currentage) + ", Tamer will  officially be " + str(currentage + 18) + " aka an old, old man. Happy future birthday to the most beloved geezer!")
-    else:
-         print("When I'm " + str(currentage) + ", Tamer will be " + str(currentage + 18))
+print("\n")
 
 #----------------------------------------------------------------------------------------------
 
@@ -43,4 +30,19 @@ if age >= 21:
 else:
     print("Uh oh, you can't drink...")
 
+print("")
+#---------------------------------------------------------------------------------------------
+
+#Goes through my ages from 0-82, and for each age, prints my age and Tamer's age. It's basically a loop with a few if and elif statements tossed in!
+for currentage in range (0, 83):
+    if currentage < 19:
+        print("When I was " + str(currentage) + ", Tamer was " + str(currentage + 18))
+    elif currentage == 19:
+        print("Now that I'm " + str(currentage) + ", Tamer is " + str(currentage + 18))
+    elif currentage == 82:
+        print("When I'm " + str(currentage) + ", Tamer will  officially be " + str(currentage + 18) + " aka an old, old man. Happy future birthday to the most beloved geezer!")
+    else:
+         print("When I'm " + str(currentage) + ", Tamer will be " + str(currentage + 18))
+
+print("")
 #----------------------------------------------------------------------------------------------
