@@ -298,7 +298,144 @@ list8 = [1, 2, 3]
 list7.extend(list8)
 print(list7)
 
+print ("\n")
+
+#A tuple is a collection which is ordered and unchanable. Tuples are written with parentheses. You can access their items, negative index them, specify ranges of indexes, loop, check for items, check length, and add the same way you would with a list! The differences will be listed below
+#Although you can't change tuple values, you can convert it into a list, change the list, and convert the list back to a tuple.
+tuple1 = ("apple", "banana", "cherry")
+list8 = list(tuple1)
+list8[1] = "kiwi"
+tuple1 = tuple(list8)
+
+print(tuple1)
+
+#You can create a tuple with one item, but you have to put a comma in after the item or Python won't recognize the variable
+tuple2 = ("apple",)
+print(type(tuple2))
+
+#A set is a collection which is unordered and unindexed. In python, sets are written with curly brackets.
+set1 = {"apple", "banana", "cherry"}
+print(set1)
+
+#You can't access items by referring to an index, since sets are unordered, but you can loop through the set items using a for loop or ask if the value is present in the set by using "in"
+#This loops through the set and prints the values
+for bb in set1:
+    print(bb)
+
+#This checks to see if there's an item present in the set
+print("banana" in set1)
+
+#You can add items to a set, but can't change preexisting items
+set1.add("orange")
+print(set1)
+
+#Or even add multiple items at once using update()
+set1.update(["orange", "mango", "grape"])
+print (set1)
+
+#To remove an item, use remove() or discard()
+set1.remove("banana")
+print(set1)
+
+#There are two ways to join two or more sets in python. You can use union() or update()
+set2 = {"a", "b", "c"}
+set3 = {1, 2, 3}
+set2.update(set3)
+print(set2)
+
+print ("\n")
+
+#And FINALLY let's play around with if/else statements
+cc = 200
+dd = 33
+if dd > cc:
+    print("dd is greater than cc")
+elif cc == dd:
+    print("cc and dd are equal")
+else:
+    print("cc is greater than dd")
+
+#You can have nested if statements
+ee = 41
+
+if ee > 10:
+    print("Above ten,")
+    if ee > 20:
+        print("and also above 20")
+    else:
+        print("but not above 20")
+
+print ("\n")
+
+#If statements can't be empty, but if you have an if statement without content, put in the pass statement to avoid getting an error
+if cc > dd:
+    pass
+
+#Let's learn about while loops! While loops execute a set of statements as long as the condition is true
+ff = 1
+while ff < 6:
+    print(ff)
+    ff += 1
+
+print ("\n")
+
+#With the "break" statement, we can stop the loop even if the while condition is true
+ff = 1
+while ff < 6:
+    print(ff)
+    if (ff == 3):
+        break
+    ff += 1
+
+print ("\n")
+
+#With the continue statement, we can stop the current iteration and continue to the next loop
+ff = 0
+while ff < 6:
+    ff += 1
+    if ff == 3:
+        continue
+    print(ff)
+
+print ("\n")
+
+#We can also use else statements once a block of code is no longer true
+ff = 1
+while ff < 6:
+    print(ff)
+    ff += 1
+else:
+    print("ff is no longer less than six")
+
+print ("\n")
+
+#For loops time! These things are used for iterating over a sequence (list, tuple, dictionaru, set, or string). Using these, we can execufte a set of statements, once for each item in a list, tuple, set, etc...
+for gg in list2:
+    print(gg)
+
+for gg in ("banana"):
+    print(gg)
+
+#To loop through a set o code a specified number of times, we can use the range() function. It returns a sequene of numbers, starting from 0 and increments by one, and ends at a specified number
+for gg in range (6):
+    print (gg)
+
+print ("\n")
+
+#Specifies the range of numbers to be cycled through
+for gg in range(2,6):
+    print(gg)
+
+print ("\n")
+
+#Speifies the range of numbers to be cycled through and the increment that it'll increase by
+for gg in range (2, 30, 3):
+    print(gg)
 
 
+
+print ("\n")
+
+print ("\n")
 
 print ("\n")

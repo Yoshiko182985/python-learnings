@@ -1,8 +1,8 @@
 # Jo's Code Journeys
 
- * An age program
  * A hello world intro with a metric fuckton of notes 
-
+ * Essentially, a glorofied coding to-do list with some projects
+ 
 ## And now to learn about MD format!
 
 ### Let's start with headers...
