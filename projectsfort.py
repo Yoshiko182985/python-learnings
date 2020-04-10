@@ -18,9 +18,26 @@ print("\n")
 
 #----------------------------------------------------------------------------------------------
 
+#This exercise runs a function that prints stars in a pyramid shape depending on user input
+def printStars(numStars):
+    m = 0
+    while (m < numStars):
+        print("*", end = "")
+        m = m + 1
+    print("")
+
+size = int(input("Pyramid size: "))
+a = 1
+
+while (a <= size):
+    printStars(a)
+    a = a + 1
+
+#----------------------------------------------------------------------------------------------
+
 #This file asks for your name and age and tells you whether or not you're allowed to drink!
-age = int(input("Enter your age: "))
 name = input("Enter your name: ")
+age = int(input("Enter your age: "))
 
 print (name, "is", (age), "years old.")
 #Plus signs were all that was available pre-python3, and you needed to include spaces in strings, but commas are a new feature in python3 that automatically adds in spaces! Oh the convenience of modern technology

@@ -432,10 +432,116 @@ print ("\n")
 for gg in range (2, 30, 3):
     print(gg)
 
+#The else keyword in a for loop specifies a block of code to be executed when the loop is finished
+for gg in range(6):
+    print(gg)
+else:
+    print("Finally finished!")
+
+#A nested loop is a loop inside a loop. The inner loop will be executed one time for each iteration of the outer loop
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+for hh in adj:
+    for ii in fruits:
+        print (hh, ii)
+
+# Let's learn about functions! A function is a block of code which only runs when it's called. You can pass data, known as parameters, into a function. Functions can return data as a result
+def func1():
+    print("Hello from a function!")
+
+#Now let's call the function using the name followd by parenthesis
+func1()
+
+#Arguments are specified after the function name inside the parentheses. You can add as many arguments as you'd like, just separate them with a comma.
+def func2(lastname):
+    print(lastname + " Smith")
+
+func2 ("John")
+func2 ("Andy")
+func2 ("Breanna")
+
+#Functions must be called with the correct number of arguments, for example, if your function expects two arguments, you have to call the function with two arguments
+def func3(fname, lname):
+    print(fname + " " + lname)
+
+func3("Sasha", "Brown")
+
+#You can also send arguments with the key = value syntax... This way, the order doesn't matter!
+def func4(child3, child2, child1):
+    print("The youngest child is " + child3)
+
+func4(child1 = "Josh", child2 = "Billy", child3 = "Tobias")
+
+#This shows how to use a default parameter value, aka what happens if we call the function without an argument
+def func5(country = "Norway"):
+    print("I am from " + country)
+
+func5("Sweden")
+func5("India")
+func5()
+func5("Brazil")
+
+#You can send any data types of argument to a function (string, number, list, disctionary, etc...) and it will be treated as the same data type inside the function
+def func6(food):
+    for jj in food:
+        print(jj)
+
+fruits = ["apple", "banana", "cherry"]
+func6(fruits)
+
+#To let a function return a value, use the "return" statement
+def func7(kk):
+    return 5 * kk
+
+print(func7(3))
+print(func7(5))
+print(func7(9))
+
+print ("\n")
+
+#Let's learn about reursion! Recursion is a function that can call itself. This splits up the workload and keeps the computer focused on only the next task in front of itself
+
+#Now let's take a look at this example. Remember factorials? The actual definition is "the product of an integer and all the integers below it. For example, this is what factorial 5 would look like...
+#5! = 5 + 4 + 3 + 2 + 1 = 15
+#In our example, we have 5! -> return 5 + 4! -> return 4 + 3! -> return 3 + 2! -> return 2 + 1!
+#Now let's work backwards. 1! = 1, now add this to return 2 to get a product of 3. Now we have 2!, which we've determined is three, and when you add this to return 3, you'll get 6. Add six (aka, 3!) to return 4 to get 10. Finally, take your ten (4!), and add it to your original five! The total is fifteen.
+
+print("Recursion Example Results")
+
+def factorial(ll):
+    if (ll == 0):
+        result = 0
+    else:
+        result = ll + factorial(ll - 1)
+        print("\t",  result)
+    return result
+
+#Or we can avoid the variable "result" and return the value as soon as either "if" or "else" is called
+def fact(ll):
+    if (ll == 0):
+        return 0
+    else:
+        return ll + factorial(ll - 1)
+
+res = factorial(5)
+print(res)
+
+print ("\n")
+
+#A lambda function is a small anonymous function that can take any number of arguments, but can only have one expression
+#Syntax -- lambda arguments : expression
+mm = lambda a : a + 10
+
+
+
+
 
 
 print ("\n")
 
 print ("\n")
-
-print ("\n")
+    return result
+    return result
+    return result
+    return result
