@@ -1,108 +1,87 @@
-print("Hello, world!")
+print("\033[94mHello, World!\033[0m")
 
-print("\n")
+print()
 
-#Variables are created upon declaration
-#Strings can be declared with the use of double or single quotes
-a =  '"Hey! '
-b =  'John Doe!"'
-print (a + b)
+#You can assign values to multiple variables at a time!
+a, b, c  = "Apple", "Banana", "Cherry"
+print (a)
+print (b)
+print (c)
 
-print("\n")
-
-#Python allows you to assign values to multiple variables in one line!
-e, f, g = "Orange", "Banana", "Cherry"
-print (e)
-print (f)
-print (g)
-
-print("\n")
+print()
 
 #You can also assign the same value to multiple variables in one line!
-h = i = j = "Apple"
-print (h)
-print (i)
-print (j)
+d1 = d2 = d3 = "Dragonfruit"
+print (d1)
+print (d2)
+print (d3)
 
-print("\n")
+print()
 
 #If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value!
-k = "awesome"
+adj = "awesome"
 
-def func1():
-    k = "fantastic"
-    print("Python is " + k)
+def pythonIs():
+    adj = "fantastic"
+    print("Python is " + adj)
 
-func1()
+pythonIs()
 
 #The area inside a function's parentheses (argument) can also be given a variable whose meaning will be defined when the function is called
-def func2(k):
-    print("Python is " + k)
+def pythonIs2(adj2):
+    print("Python is " + adj2)
 
-func2("cool")
-func2("terrible")
+pythonIs2("cool")
+pythonIs2("terrible")
 
-print("\n")
+print()
 
 #How to get random numbers
 print("Let's generate some random numbers!")
 import random
 print (random.randrange(1,10))
 
-print("\n")
-
-l = """Remember how we made a multiline comment earlier? This is a multiline string variable using three quotes! It's the same as making a comment, but this time the variable will be called on!"""
-print(l)
-
-print ("\n")
+print()
 
 #Strings are arrays! You can either call on one character, or you can call on a range of characters using the slice syntax. Just remember, counting arrays starts from zero, and when you slice, the last character isn't counted!
-m = "Boots and cats"
-print('The fourth character in "boots and cats" is ' + (m[4]))
+BAC = "Boots and cats"
+print('The fourth character in "boots and cats" is ' + (BAC[4]))
 
-print ('The slice of characters 4-8 in "boots and cats" is '+ (m[4:8]))
+print ('The slice of characters 4-8 in "boots and cats" is '+ (BAC[4:8]))
 
 #You can also use negative indexes to start the slice from the end of the string!
-print ('The negative index of characters 4-1 in "boots and cats" is ' + (m[-4:-1]))
+print ('The negative index of characters 4-1 in "boots and cats" is ' + (BAC[-4:-1]))
 
 #Let's count string length!
-print ('"Boots and cats" has '+ str(len(m)) +' characters')
+print ('"Boots and cats" has '+ str(len(BAC)) +' characters')
 
 #Returns the string in all lowercase
-print (m.lower())
+print (BAC.lower())
 
 #Returns the string in all uppercase
-print (m.upper())
+print (BAC.upper())
 
 #Replaces a string with another string
-print (m.replace("cats", "dogs"))
+print (BAC.replace("cats", "dogs"))
 
-print ("\n")
+print ()
 
 #Checks if a phrase/character is present in a string using "in" or "not in", verified with true or false
 txt = "The rain in Spain stays mainly in the plain"
-n = "ain" in txt
-print (n)
+e = "ain" in txt
+print (e)
 
-o = "ain" not in txt
-print (o)
+f = "ain" not in txt
+print (f)
 
-print ("\n")
+print ()
 
-#Let's merge variables!
-p = "Bon"
-q = "journee!"
-r = p + " " + q
-print (r)
-
-print ("\n")
-
-#The "format()" method taxes the passed arguments, formats them, and places them in the string where the placeholers {} are
+#The "format()" method takes the passed arguments, formats them, and places them in the string where the placeholers {} are
 age = 19
 txt2 = "My name is Jo, and I'm {} years old!"
 print(txt2.format(age))
 
-print ("\n")
+print ()
 
 #"format()" taxes unlimited numbers of arguments whih are placed into their respective placeholders
 quantity = 3
@@ -111,29 +90,29 @@ price = 49.95
 myorder = "I want {} pieces of item {} for ${}."
 print (myorder.format(quantity, itemno, price))
 
-print ("\n")
+print ()
 
 #To insert characters that are illegal in a string, use an escape character (\) followed by the character you want to insert
 txt3 = "We are the so-called \"Vikings\" from the north!"
 print (txt3)
 
-print ("\n")
+print ()
 
-#Creates a new line (Carriage return)
-#In python 2, the standard way of printing was without parentheses
+#Creates a new line
 txt4 = ("What goes,\nlet go")
 print (txt4)
 
+#Creats an indentation
 txt5 = ("Long time\tno see!")
 print (txt5)
 
-print ("\n")
+print ()
 
 #Let's take a look at string methods! They return new values but don't change the original string. Methods are called with yourvariable.methodname()
-s = "I always like to fall asleep when it's raining."
-print (s.casefold())
+rain = "I sleep when it rains."
+print (rain.casefold())
 
-print ("\n")
+print ()
 
 #Lets review booleans!
 print (10 > 9)
@@ -141,41 +120,38 @@ print (10 == 9)
 print (10 < 9)
 
 #Let's use booleans in if/then statements!
-t = 200
-u = 33
+th = 200
+tt = 33
 
-if u > t:
-    print ("u is greater than t")
+if th > tt:
+    print ("th is greater than tt")
 else:
-    print ("u is not greater than t")
+    print ("tt is not greater than th")
 
 #You can execute code based on the boolean answer of a function EX: print yes if the function returns true, otherwise print no
-def functhree() :
+def ToF() :
     return True
 
-if functhree() :
+if ToF() :
     print("Yes")
 else:
     print("No")
 
-print ("\n")
+print ()
 
 #Let's work on some logical operators: and, or, and not
+var = 5
 
-v = 5
-
-print (v > 3 and v < 10)
-print (v > 3 or  v < 4)
-print (not(v > 3 and v < 10))
+print (var > 3 and var < 10)
+print (var > 3 or  var < 4)
+print (not(var > 3 and var < 10))
 
 #Let's look into some identity operators: is, is not.
 w = ["apple", "banana"]
 x = ["apple", "banana"]
 y = w
 
-print ("\n")
-
-#"==" compares for value, is compares for identity
+print ()
 
 print (w is y)
 #Returns True because w is the same object as y
@@ -186,7 +162,7 @@ print (w is x)
 print (w == x)
 #This demonstrates the difference between "is" and "==": this comparison returns True because w is equal to x
 
-print ("\n")
+print ()
 
 #"in" returns True if a sequence with the specified value is present in the object
 print ("banana" in w)
@@ -195,7 +171,7 @@ print ("banana" in w)
 print ("pineapple" not in w)
 #Returns True  because a sequence with the value "pineapple" is not in the list
 
-print ("\n")
+print ()
 
 #A list is a collection which is ordered and changeable
 list1 = ["apple", "banana", "cherry"]
@@ -207,7 +183,7 @@ print(list1[1])
 #Let's try using a negative index, aka beginning from the end! -1 is the last item, -2 is the second to last item, etc...
 print(list1[-1])
 
-print ("\n")
+print ()
 
 #Let's practice specifying a range of indexes by specifying where to start and end the range. When specifying a range, the return value will be a new list with the specified items
 list2 = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
@@ -222,7 +198,7 @@ print(list2[2:])
 #Specify negative indexes if you want to start the search from the end of the list
 print(list2[-4:-1])
 
-print ("\n")
+print ()
 
 #To change the value of a specific item, refer to the index number, for example, this changes the second item
 list1[1] = "blackcurrant"
@@ -298,7 +274,7 @@ list8 = [1, 2, 3]
 list7.extend(list8)
 print(list7)
 
-print ("\n")
+print ()
 
 #A tuple is a collection which is ordered and unchanable. Tuples are written with parentheses. You can access their items, negative index them, specify ranges of indexes, loop, check for items, check length, and add the same way you would with a list! The differences will be listed below
 #Although you can't change tuple values, you can convert it into a list, change the list, and convert the list back to a tuple.
@@ -527,21 +503,50 @@ def fact(ll):
 res = factorial(5)
 print(res)
 
-print ("\n")
+print ()
 
-#A lambda function is a small anonymous function that can take any number of arguments, but can only have one expression
-#Syntax -- lambda arguments : expression
-mm = lambda a : a + 10
+#Let's make classes (templates) and objects (instances of it)
+#note: self refers to the current instance of person, in other language, it's known as "this"
+#a function that is part of an object is usually referred to as a method
+class person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def func8(self):
+        print("Hello, my name is " + self.name)
+
+p1 = person("Jo", 19)
+
+print(p1.name)
+print(p1.age)
+p1.func8()
+
+#You can also modify properties on objects
+p1.age = 25
+print(p1.age)
+#You can also delete objects by using the "del" keyword
+
+print()
+
+#Let's study python inheritance! This allows us to define a class that inserts all the methods and properties from another class
+#There are two types: parent and child classes. The parent class is the class that's inhereted from, also called the base class. The child class is what inherets from another class, also called the derived class.
+#Let's start by creating a new parent class!
+class Cookies:
+    def __init__(self, size):
+        self.size = size
+
+    def printCookies(self):
+        print("The size of this cookie is " + self.size)
+
+cookie1 = Cookies("Large")
+
+cookie1.printCookies()
 
 
 
 
 
 
-print ("\n")
 
-print ("\n")
-    return result
-    return result
-    return result
-    return result
+

@@ -1,7 +1,8 @@
 # Jo's Code Journeys
 
  * A hello world intro with a metric fuckton of notes 
- * Essentially, a glorified coding to-do list with some projects
+ * A glorified coding to-do list with some projects for T
+ * A confusing yet "dynamic" python file that makes a "static" html file
  
 ## And now to learn about MD format!
 
