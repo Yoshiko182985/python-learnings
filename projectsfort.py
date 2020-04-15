@@ -4,7 +4,7 @@
 #1. Find the average of three user-given numbers!
 #2. Make it optional to print the menu in the last function
 #3. Make a function that allows any string to print any different color of text!
-#----------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
 
 #Print as many stars as the variable "count", make them all appear on the same line... Challenge: Maybe make it randomized or from user input?
 
@@ -15,7 +15,7 @@ def func1():
         print("*", end = "" )
     print("\n")
 
-#-------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
 
 #This exercise runs a function that prints stars in a pyramid shape depending on user input
 
@@ -33,7 +33,7 @@ def func2 ():
         printStars(a)
         a = a + 1
 
-#----------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
 
 #This file asks for your name and age and tells you whether or not you're allowed to drink!
 
@@ -48,7 +48,7 @@ def func3 ():
     else:
         print("Uh oh, you can't drink...")
 
-#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
 
 #Goes through my ages from 0-82, and for each age, prints my age and Tamer's age. It's basically a loop with a few if and elif statements tossed in!
 
@@ -63,7 +63,7 @@ def func4 ():
         else:
              print("When I'm " + str(currentage) + ", Tamer will be " + str(currentage + 18))
 
-#----------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
 
 def pickMenu():
     choice = int(input("Which function would you like? "))
@@ -95,5 +95,5 @@ while (True):
     printMenu()
     pickMenu()
 
-#----------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
 

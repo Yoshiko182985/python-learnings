@@ -1,9 +1,11 @@
 # Jo's Code Journeys
 
- * A hello world intro with a metric fuckton of notes 
- * A glorified coding to-do list with some projects for T
- * A confusing yet "dynamic" python file that makes a "static" html file
- 
+ * helloworld.py - A hello world intro with a metric fuckton of notes 
+ * helloworld2.py - A second file of notes because the first just wasn't enough
+ * projectsfort.py - A glorified coding to-do list with some projects for T
+ * make_tj_list.py - A confusing yet "dynamic" python file that makes a "dynamically created" html file
+ * fontcolor.py - A cute lil file that makes using bash colors a LOT easier!
+
 ## And now to learn about MD format!
 
 ### Let's start with headers...
