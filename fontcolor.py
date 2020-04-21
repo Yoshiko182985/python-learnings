@@ -20,10 +20,10 @@ colorDic = {
         "lightBlue" : "96m"
         }
 
-def toColor(color, text):
+def to(color, text):
     return(START + colorDic[color] + text + END)
 
 #If I'd like to import this file into other ones for later use, please pay close attention to the following directions!
 # 1. import fontcolor as col
 #  ~ by adding "as col", we're importing fontcolor under a nickname, so we won't have to call the full file name every time!
-# 2. print(col.toColor("pink", "Hi!"))
+# 2. print(col.to("pink", "Hi!"))

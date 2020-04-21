@@ -5,6 +5,9 @@
  * projectsfort.py - A glorified coding to-do list with some projects for T
  * make_tj_list.py - A confusing yet "dynamic" python file that makes a "dynamically created" html file
  * fontcolor.py - A cute lil file that makes using bash colors a LOT easier!
+ * file_handling - A folder that contains three practice files for well.. Handling python files!
+ * args.py - A file that takes arguments from the terminal and uses it to execute the program
+
 
 ## And now to learn about MD format!
 
