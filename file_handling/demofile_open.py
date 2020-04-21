@@ -27,7 +27,7 @@ for m in f:
 
 #Let's add some content to this file!
 f = open("demofile.txt", "a")
-f.write("This is a line that will be written in!")
+f.write("This is a line that will be written in! ")
 
 f.close()
 
