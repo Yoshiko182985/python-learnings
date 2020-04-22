@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../')
 import fontcolor as col
 
 #In this file, we'll be learning to interact with other files (reading, writing, deleting)
