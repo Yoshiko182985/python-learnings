@@ -6,6 +6,12 @@ if len(sys.argv) == 3:
     #newfile = "CAPS_" + ogfile.upper()
     newfile = sys.argv[2]
 
+    try:
+        og = open(ogfile, "r")
+    except Exception as e:
+        print("Could not open", ogfile)
+        exit()
+
     og = open(ogfile, "r")
     n = open(newfile, "w")
     numLine = 0
