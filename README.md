@@ -7,7 +7,7 @@
  * fontcolor.py - A cute lil file that makes using bash colors a LOT easier!
  * file_handling - A folder that contains three practice files for well.. Handling python files!
  * args.py - A file that takes arguments from the terminal and uses it to execute the program
-
+ * meetup - A folder that contains my Meetup organization project
 
 ## And now to learn about MD format!
 
