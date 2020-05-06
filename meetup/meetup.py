@@ -29,6 +29,7 @@ class Member:
 
     def description(self):
         return self.name + ", " + self.level.prettyName
+#Member.description()
 
 # This reads levels from the config file
 # and returns a dictionary where the key is
@@ -44,9 +45,12 @@ def loadLevels(filename):
 
     for everyLine in o:
         array = everyLine.split(", ")
-        array[2] = array[2].strip()
-        level = Level(array[1], array[0], array[2])
-        levels[array[1]] = level
+        id = array[1]
+        name = array[0]
+        prettyName = array[2].strip()
+        foo = Level(id, name, prettyName)
+        #"foo" holds the current level object we created
+        levels[id] = foo
     o.close()
     return levels
 
@@ -60,17 +64,48 @@ def loadMembers(filename, levels):
 
     for everyLine in o:
         array = everyLine.split(", ")
-        array[1] = array[1].strip()
-        member = Member(array[0], array[1])
-        members.append(array[0])
+        name = array[0]
+        levelId = array[1].strip()
+        member = Member(name, levels[levelId])
+        members.append(member)
     o.close()
     return members
 
 levels = loadLevels('levels.conf') # dict of int -> Level
-members = loadMembers('members.conf', levels)
+weirdos = loadMembers('members.conf', levels)
 
+print("LEVELS")
 for key in levels:
     print(levels[key].prettyName)
+
+print()
+print("MEMBERS")
+for m in weirdos:
+    print(m.name, '(' + m.level.name + ')')
+
+print()
+
+print("NATIVES")
+for m in weirdos:
+    if (m.level.id) == "4":
+        print(m.name)
+
+print()
+print("These are all the level ID's:")
+for level in levels:
+    print(level)
+
+print()
+#So what now?
+#cycle though the levels dictionary printing the people in each level
+#for loop-iterates over levels
+#for loop
+#if statement
+print
+
+
+
+
 
 
 #member = Member("Bob", example)
