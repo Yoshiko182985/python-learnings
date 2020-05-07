@@ -1,10 +1,8 @@
-#Array - a list
-#in this program, we'll print the smallest number in the array
+#This program runs some basic arithmatic, while practicing nested loops
 
-#Turn this into a function!
-# getMin takes an array and returns the smallest
+import time
 
-def getMin (nums):
+def getMin(nums):
     min = nums[0]
 
     for x in nums:
@@ -12,7 +10,7 @@ def getMin (nums):
             min = x
     return min
 
-def getMax (nums):
+def getMax(nums):
     max = nums[0]
 
     for x in nums:
@@ -20,9 +18,39 @@ def getMax (nums):
             max = x
     return max
 
-nums = [-2, 45, 62, 18, 45, 92, 5, 23, 79, -1, -5]
+def avg(nums):
+    a = 0
 
+    for x in nums:
+        a = x + a
+
+    a = a / (len(nums))
+    return a
+
+def getMinMax(nums):
+    min = nums[0]
+    max = nums[0]
+    for x in nums:
+        if x >= max:
+            max = x
+        if x <= min:
+            min = x
+    return (min, max)
+
+
+nums = [5, -15, 10]
+t1 = time.time()
+
+minmax = getMinMax(nums)
 smallest = getMin(nums)
 largest = getMax(nums)
+average = avg(nums)
+
+t2 = time.time()
+delta = t2 - t1
+print("Runtime took:", delta, "seconds")
+
+print(minmax)
 print("The smallest number in your list is", smallest)
 print("The biggest number in your list is", largest)
+print("The average of your list is", average)

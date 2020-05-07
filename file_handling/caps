@@ -1,4 +1,9 @@
 #!/Library/Frameworks/Python.framework/Versions/3.8/bin/python3
+
+# The purpose of this file is to create a program that reads
+# a file and rewrites it in all caps, with a customizable title
+# It also catches some errors!
+
 import sys
 
 if len(sys.argv) == 3:

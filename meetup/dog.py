@@ -1,3 +1,5 @@
+# This file explains how classes work and how they interact together
+
 class Person:
     def __init__(self, name):
         self.name = name

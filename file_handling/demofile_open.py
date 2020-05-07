@@ -1,9 +1,9 @@
+# Let's learn file handling! In this file, we'll be learning to read, write, and
+# delete from other files!
+
 import sys
 sys.path.append('../')
 import fontcolor as col
-
-#In this file, we'll be learning to interact with other files (reading, writing, deleting)
-print()
 
 #This opens and reads all of demofile.txt
 f = open("demofile.txt", "r")
